@@ -1,0 +1,12 @@
+venv/
+.env
+__pycache__/
+*.pyc
+*.log
+.cache/
+models/
+data/
+qdrant_data/
+*.bin
+*.pt
+*.onnx
