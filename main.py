@@ -6,6 +6,7 @@ init_llama_settings()
 
 # Run once to ingest data
 # ingest_excel(r"/home/ubuntu/rag-hs-code/data/hs_code.xlsx")
+# ingest_excel(r"/home/ubuntu/rag-hs-code/data/HSCodeMaster v3.2 (1).xlsx")
 
 
 while True:

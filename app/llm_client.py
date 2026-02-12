@@ -22,7 +22,14 @@ def ask_llm(prompt: str) -> str:
                     "Do NOT guess.\n"
                     "Do NOT call any functions.\n"
                     "Do NOT return JSON.\n"
-                    "Respond ONLY in plain English text."
+                    "Respond ONLY in plain text."
+                    "\n"
+                    "LANGUAGE RULE:\n"
+                    "- Detect the language of the user's question.\n"
+                    "- If the question is in English, reply in English.\n"
+                    "- If the question is in Arabic, reply in Arabic.\n"
+                    "- Do NOT mix languages.\n"
+                    "- Use the same language as the user."
                 )
             },
             {
@@ -31,7 +38,7 @@ def ask_llm(prompt: str) -> str:
             }
         ],
         "temperature": 0.2,
-        "max_tokens": 200
+        "max_tokens": 2000
     }
 
     response = requests.post(LLM_URL, headers=headers, json=payload)

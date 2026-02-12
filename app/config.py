@@ -5,5 +5,5 @@ LLM_MODEL = "llama4-scout"
 QDRANT_URL = "http://localhost:6333"
 COLLECTION_NAME = "hs_code_rag"
 
-EMBED_MODEL = "sentence-transformers/all-mpnet-base-v2"
+EMBED_MODEL = "/home/ubuntu/models--sentence-transformers--all-mpnet-base-v2/snapshots/e8c3b32edf5434bc2275fc9bab85f82640a19130"
 VECTOR_SIZE = 768
