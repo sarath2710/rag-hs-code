@@ -14,8 +14,6 @@ def ingest_excel(path):
         
         text = (
             f"HS Code Information.\n"
-            # f"Old HS Code: {row['OldHSCode']}\n"
-            # f"New HS Code: {row['NewHSCode']}\n"
             f"Old HS Code: {old_code}\n"
             f"New HS Code: {new_code}\n"
             f"Arabic Description: {row['LongDescAr']}\n"

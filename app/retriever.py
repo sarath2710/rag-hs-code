@@ -1,3 +1,4 @@
+import requests as r
 import re
 from llama_index.core import VectorStoreIndex
 from llama_index.core.vector_stores import MetadataFilters, ExactMatchFilter
@@ -36,18 +37,6 @@ def retrieve(question, top_k=50):
         nodes = retriever.retrieve("hs code lookup")
 
     # CASE 2️ : Prefix search
-    # elif hs_match:
-    #     prefix = hs_match.group()
-
-    #     # Fetch many → filter manually
-    #     retriever = index.as_retriever(similarity_top_k=top_k)
-    #     nodes = retriever.retrieve(prefix)
-
-    #     nodes = [
-    #         n for n in nodes
-    #         if n.metadata
-    #         and n.metadata.get("new_hs_code", "").startswith(prefix)
-    #     ]
 
     elif hs_match:
         prefix = hs_match.group()

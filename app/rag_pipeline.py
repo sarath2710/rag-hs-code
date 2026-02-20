@@ -1,7 +1,6 @@
-# ================
 from app.retriever import retrieve
 from app.llm_client import ask_llm
-
+import requests as r
 def run_rag(question):
     docs = retrieve(question)
 
@@ -20,30 +19,6 @@ def run_rag(question):
 
     print(context)
     print("----------------------- The final output is -----------------------")
-
-#     prompt = f"""
-# You are a customs HS code assistant.
-
-# STRICT RULES:
-# - Answer ONLY using the context
-# - Do NOT guess
-# - Do NOT call any tools or functions
-# - Do NOT return JSON
-# - Respond in plain English text
-# - Provide both HS codes for the output:
-#     * old_hs_code must be 8 digits
-#     * new_hs_code must be 12 digits
-# - If answer not found, say exactly:
-#   "Not available in provided data!"
-
-# Context:
-# {context}
-
-# Question:
-# {question}
-
-# Answer:
-# """
 
     prompt = f"""
 You are a customs HS code assistant.

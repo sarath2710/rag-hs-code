@@ -1,11 +1,12 @@
 from qdrant_client import QdrantClient
 from llama_index.vector_stores.qdrant import QdrantVectorStore
 from llama_index.core import StorageContext
-from app.config import QDRANT_URL, COLLECTION_NAME
+from app.config import QDRANT_URL, COLLECTION_NAME, QDRANT_SERVICE_API_KEY
 
 def get_storage_context():
     client = QdrantClient(
         url=QDRANT_URL,
+        api_key=QDRANT_SERVICE_API_KEY,
         prefer_grpc=False
     )
 
